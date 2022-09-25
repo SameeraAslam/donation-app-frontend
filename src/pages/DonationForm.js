@@ -19,6 +19,7 @@ import * as Yup from "yup";
 import { Formik, useFormik } from "formik";
 import { toast, ToastContainer } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import { baseURL } from "../config/config";
 
 const donateSchema = Yup.object({
   donorName: Yup.string().required("name is required."),
@@ -60,7 +61,7 @@ const DonationForm = () => {
     initialValues: initialValues,
     validationSchema: donateSchema,
     onSubmit: async (values) => {
-      const response = await fetch("http://localhost:1337/api/adddonation", {
+      const response = await fetch(`${baseURL}adddonation`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

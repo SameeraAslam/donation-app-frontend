@@ -31,7 +31,7 @@ const LogIn = () => {
       initialValues: initialValues,
       validationSchema: SignIn,
       onSubmit: async (values) => {
-        const response = await fetch("http://localhost:1337/api/login", {
+        const response = await fetch(`${baseURL}login`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

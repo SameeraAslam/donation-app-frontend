@@ -16,7 +16,7 @@ import Header from "../components/Header";
 const Donors = () => {
   const [donors, setDonors] = useState([]);
   const getDonors = async () => {
-    const response = await fetch("http://localhost:1337/api/getdonation", {
+    const response = await fetch(`${baseURL}getdonation`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

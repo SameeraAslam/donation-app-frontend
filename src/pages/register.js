@@ -32,7 +32,7 @@ const Register = () => {
       initialValues: initialValues,
       validationSchema: SignUp,
       onSubmit: async (values) => {
-        const response = await fetch("http://localhost:1337/api/register", {
+        const response = await fetch(`${baseURL}regitser`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

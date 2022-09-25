@@ -22,6 +22,7 @@ const darkTheme = createTheme({
   },
 });
 function App() {
+  console.log("work Correct");
   return (
     <>
       <ThemeProvider theme={darkTheme}>

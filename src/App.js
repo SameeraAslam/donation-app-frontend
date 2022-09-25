@@ -12,6 +12,7 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { ToastContainer } from "react-toastify";
 import Donors from "./pages/Donors";
 
+console.log("hello world");
 const darkTheme = createTheme({
   palette: {
     mode: "dark",

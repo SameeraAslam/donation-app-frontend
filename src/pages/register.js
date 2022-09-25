@@ -15,6 +15,7 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { toast } from "react-toastify";
+import { baseURL } from "../config/config";
 
 
 const Register = () => {
@@ -32,7 +33,7 @@ const Register = () => {
       initialValues: initialValues,
       validationSchema: SignUp,
       onSubmit: async (values) => {
-        const response = await fetch(`${baseURL}regitser`, {
+        const response = await fetch(`${baseURL}api/regitser`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

@@ -15,6 +15,7 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import { baseURL } from "../config/config";
 
 
 
@@ -31,7 +32,7 @@ const LogIn = () => {
       initialValues: initialValues,
       validationSchema: SignIn,
       onSubmit: async (values) => {
-        const response = await fetch(`${baseURL}login`, {
+        const response = await fetch(`${baseURL}api/login`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

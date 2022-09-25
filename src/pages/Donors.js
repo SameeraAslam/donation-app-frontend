@@ -12,11 +12,12 @@ import {
 } from "@mui/material";
 import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
+import { baseURL } from "../config/config";
 
 const Donors = () => {
   const [donors, setDonors] = useState([]);
   const getDonors = async () => {
-    const response = await fetch(`${baseURL}getdonation`, {
+    const response = await fetch(`${baseURL}api/getdonation`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

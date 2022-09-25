@@ -61,7 +61,7 @@ const DonationForm = () => {
     initialValues: initialValues,
     validationSchema: donateSchema,
     onSubmit: async (values) => {
-      const response = await fetch(`${baseURL}adddonation`, {
+      const response = await fetch(`${baseURL}api/adddonation`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
